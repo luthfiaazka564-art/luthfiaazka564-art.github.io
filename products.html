@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Dubai Ciwi</title>
+
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            background: #fff8f0;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #7b3f00;
+            margin-bottom: 35px;
+        }
+
+        .produk-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .produk-card {
+            width: 250px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transition: 0.4s ease;
+            text-align: center;
+        }
+
+        /* Card bergerak saat disentuh/diarahkan */
+        .produk-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .gambar-produk {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        /* Gambar ikut membesar */
+        .produk-card:hover .gambar-produk {
+            transform: scale(1.08);
+        }
+
+        .produk-info {
+            padding: 18px;
+        }
+
+        .produk-info h2 {
+            font-size: 20px;
+            color: #5c3200;
+            margin: 5px 0 10px;
+        }
+
+        .harga {
+            font-size: 20px;
+            font-weight: bold;
+            color: #c47700;
+            margin-bottom: 15px;
+        }
+
+        .deskripsi {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 18px;
+        }
+
+        .btn-beli {
+            display: inline-block;
+            background: #8b4513;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-beli:hover {
+            background: #c47700;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>✨ Produk Dubai Chewy cookie ✨</h1>
+
+    <div class="produk-container">
+
+        <!-- PRODUK 1 -->
+        <div class="produk-card">
+
+            <img 
+                src="img/gambar1.png" 
+                class="gambar-produk"
+                alt="Dubai Chewy cookie Original">
+
+            <div class="produk-info">
+                <h2>Dubai Chewy cookie Original</h2>
+
+                <p class="deskripsi">
+                    Camilan Dubai Chewy cookie dengan rasa manis dan lezat.
+                </p>
+
+                <div class="harga">
+                    Rp20.000
+                </div>
+
+                <a href="#" class="btn-beli">
+                    Beli Sekarang
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUK 2 -->
+        <div class="produk-card">
+
+            <img 
+                src="img/gambar2.jpg" 
+                class="gambar-produk"
+                alt="Dubai Chewy cookie Bites">
+
+            <div class="produk-info">
+                <h2>Dubai Chewy cookie Bites</h2>
+
+                <p class="deskripsi">
+                    Varian bites dengan cita rasa yang lebih spesial.
+                </p>
+
+                <div class="harga">
+                    Rp25.000
+                </div>
+
+                <a href="#" class="btn-beli">
+                    Beli Sekarang
+                </a>
+            </div>
+
+        </div>
+
+
+       
+ <!-- PRODUK 3 -->
+        <div class="produk-card">
+
+            <img 
+                src="img/gambar6.jpg" 
+                class="gambar-produk"
+                alt="Dubai Chewy cookie Dancow version">
+
+            <div class="produk-info">
+                <h2>Dubai Chewy cookie Dancow version</h2>
+
+                <p class="deskripsi">
+                    Perpaduan Pistachio kunafa dengan rasa vanilla yang nikmat.
+                </p>
+
+                <div class="harga">
+                    Rp28.000
+                </div>
+
+                <a href="#" class="btn-beli">
+                    Beli Sekarang
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

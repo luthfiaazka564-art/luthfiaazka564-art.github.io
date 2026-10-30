@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cabang | fia's & Co</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f7f3ef;
+    color: #44352e;
+}
+
+/* NAVBAR */
+nav {
+    background: #191715;
+    padding: 22px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f8f4f0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #c9aa97;
+}
+
+/* MAIN SECTION */
+.branch-section {
+    padding: 65px 8%;
+    min-height: 80vh;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #a38a79;
+}
+
+.section-heading h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin: 16px 0;
+}
+
+.section-heading p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #88786f;
+}
+
+/* BRANCH LAYOUT */
+.branch-container {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* BRANCH CARD */
+.branch-card {
+    background: #fffdfa;
+    padding: 32px;
+    border: 1px solid #e8dfd7;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.branch-card:hover {
+    transform: translateY(-4px);
+    border-color: #c9ad9b;
+}
+
+.branch-number {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #b18e79;
+}
+
+.branch-card h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 18px 0 12px;
+}
+
+.branch-card .description {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #88786f;
+    margin-bottom: 25px;
+}
+
+.branch-detail {
+    padding-top: 17px;
+    border-top: 1px solid #eee5dd;
+}
+
+.branch-detail h3 {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: #a38a79;
+    margin-bottom: 8px;
+}
+
+.branch-detail p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #57473e;
+    margin: 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 22px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #99877b;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 650px) {
+    nav {
+        gap: 17px;
+        padding: 18px 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .branch-section {
+        padding: 45px 6%;
+    }
+
+    .section-heading h1 {
+        font-size: 34px;
+    }
+
+    .branch-container {
+        grid-template-columns: 1fr;
+    }
+
+    .branch-card {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- CABANG TOKO -->
+<section class="branch-section">
+
+    <div class="section-heading">
+        <span>FIND US</span>
+        <h1>Our Branches</h1>
+        <p>
+            A little sweetness, closer to you.
+            <br>
+            Discover our store locations below.
+        </p>
+    </div>
+
+    <div class="branch-container">
+
+        <div class="branch-card">
+            <span class="branch-number">01 / MAIN STORE</span>
+
+            <h2>Bandung</h2>
+
+            <p class="description">
+                Visit our main store and discover
+                your favourite sweet treats.
+            </p>
+
+            <div class="branch-detail">
+                <h3>ADDRESS</h3>
+                <p>Jl. Melati No. 28, Bandung</p>
+            </div>
+
+            <div class="branch-detail">
+                <h3>OPENING HOURS</h3>
+                <p>Monday – Saturday</p>
+                <p>09.00 – 17.00 WIB</p>
+            </div>
+        </div>
+
+        <div class="branch-card">
+            <span class="branch-number">02 / OUR STORE</span>
+
+            <h2>Jakarta</h2>
+
+            <p class="description">
+                Bringing little moments of sweetness
+                to another corner of the city.
+            </p>
+
+            <div class="branch-detail">
+                <h3>ADDRESS</h3>
+                <p>Jl. Supratman No. 15, Jakarta</p>
+            </div>
+
+            <div class="branch-detail">
+                <h3>OPENING HOURS</h3>
+                <p>Monday – Saturday</p>
+                <p>09.00 – 17.00 WIB</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © fia's &amp; Co.
+</footer>
+
+</body>
+</html>

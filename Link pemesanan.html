@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order - Pesan Disini!</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Times New Roman, sans-serif;
+    background: #fff7f1;
+    color: #4b2920;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    background: linear-gradient(135deg, #713b2b, #b56a49);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 15px;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    background: white;
+    border-radius: 22px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(80,40,20,0.12);
+}
+
+.card h2 {
+    color: #7b402d;
+    margin-bottom: 22px;
+}
+
+
+/* ================= PRODUK ================= */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product {
+    border: 2px solid #f0ddd3;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fffaf7;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(80,40,20,0.15);
+}
+
+
+/* GAMBAR PRODUK */
+
+.product img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* INFO PRODUK */
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #8c6c60;
+    line-height: 1.5;
+}
+
+.price {
+    color: #a75234;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+
+/* QUANTITY */
+
+.quantity {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfc5b8;
+    border-radius: 10px;
+}
+
+
+/* ================= FORM ================= */
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dec7bb;
+    border-radius: 11px;
+    background: #fffaf7;
+    font-size: 14px;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #a85a3d;
+}
+
+
+/* ================= RINGKASAN ================= */
+
+.summary {
+    background: #fff3eb;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.total {
+    border-top: 1px solid #ddc3b7;
+    padding-top: 15px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #8b432d;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn-order {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #7d402c, #b76645);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-order:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(100,50,30,0.2);
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #98776b;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <h1>Pesan Disini!</h1>
+
+    <p>
+        Sweet treats, made with love ♡
+    </p>
+
+</div>
+
+
+
+<div class="container">
+
+
+<!-- ================= PILIH PRODUK ================= -->
+
+<div class="card">
+
+    <h2>🍪 Pilih Produk</h2>
+
+
+    <div class="products">
+
+
+        <!-- PRODUK 1 -->
+
+        <div class="product">
+
+            <img
+                src="img/gambar1.png"
+                alt="Dubai Chewy Cookie Original"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    Dubai Chewy Cookie Original
+                </h3>
+
+                <p>
+                    Dubai chewy cookie dengan
+                    rasa original yang lembut dan
+                    chewy.
+                </p>
+
+                <div class="price">
+                    Rp20.000
+                </div>
+
+                <label>
+                    Jumlah
+                </label>
+
+                <input
+                    type="number"
+                    id="original"
+                    class="quantity"
+                    value="0"
+                    min="0"
+                    onchange="hitungTotal()"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUK 2 -->
+
+        <div class="product">
+
+            <img
+                src="img/gambar2.jpg" 
+                alt="Dubai Chewy Cookie Bites"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    Dubai Chewy Cookie
+                     Bites
+                </h3>
+
+                <p>
+                    Ukuran bites yang praktis
+                    untuk dinikmati kapan saja.
+                </p>
+
+                <div class="price">
+                    Rp25.000
+                </div>
+
+                <label>
+                    Jumlah
+                </label>
+
+                <input
+                    type="number"
+                    id="bites"
+                    class="quantity"
+                    value="0"
+                    min="0"
+                    onchange="hitungTotal()"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUK 3 -->
+
+        <div class="product">
+
+            <img
+                src="img/gambar6.jpg" 
+                alt="Dubai Chewy Cookie Dancow Version"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    Dubai Chewy Cookie
+                    Dancow Version
+                </h3>
+
+                <p>
+                    Perpaduan chewy cookie
+                    dengan cita rasa Dancow.
+                </p>
+
+                <div class="price">
+                    Rp28.000
+                </div>
+
+                <label>
+                    Jumlah
+                </label>
+
+                <input
+                    type="number"
+                    id="dancow"
+                    class="quantity"
+                    value="0"
+                    min="0"
+                    onchange="hitungTotal()"
+                >
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= DATA PEMBELI ================= -->
+
+<div class="card">
+
+    <h2>📝 Data Pemesan</h2>
+
+
+    <label>
+        Nama Lengkap
+    </label>
+
+    <input
+        type="text"
+        id="nama"
+        placeholder="Masukkan nama lengkap"
+    >
+
+
+    <label>
+        Nomor WhatsApp
+    </label>
+
+    <input
+        type="tel"
+        id="telepon"
+        placeholder="08xxxxxxxxxx"
+    >
+
+
+    <label>
+        Alamat / Kelas / Tempat Pengambilan
+    </label>
+
+    <textarea
+        id="alamat"
+        placeholder="Contoh: Jl. Melati no.21"
+    ></textarea>
+
+</div>
+
+
+
+<!-- ================= PEMBAYARAN ================= -->
+
+<div class="card">
+
+    <h2>💳 Pembayaran</h2>
+
+
+    <label>
+        Metode Pembayaran
+    </label>
+
+    <select id="pembayaran">
+
+        <option value="">
+            -- Pilih Pembayaran --
+        </option>
+
+        <option value="QRIS">
+            QRIS
+        </option>
+
+        <option value="Transfer Bank">
+            Transfer Bank
+        </option>
+
+        <option value="Cash">
+            Cash
+        </option>
+
+    </select>
+
+</div>
+
+
+
+<!-- ================= RINGKASAN ================= -->
+
+<div class="card">
+
+    <h2>🛍️ Ringkasan Pesanan</h2>
+
+
+    <div class="summary">
+
+        <div class="summary-row">
+
+            <span>
+                Original
+            </span>
+
+            <span id="originalText">
+                0
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Original Bites
+            </span>
+
+            <span id="bitesText">
+                0
+            </span>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>
+                Dancow Version
+            </span>
+
+            <span id="dancowText">
+                0
+            </span>
+
+        </div>
+
+
+        <div class="summary-row total">
+
+            <span>
+                Total
+            </span>
+
+            <span id="totalText">
+                Rp0
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ORDER ================= -->
+
+<div class="card">
+
+    <button
+        class="btn-order"
+        onclick="kirimPesanan()"
+    >
+
+        🛒 Pesan Sekarang
+
+    </button>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer">
+
+    © 2026 Dubai Ciwi · Made with ♡
+
+</div>
+
+
+
+<script>
+
+
+/* ================= HARGA ================= */
+
+const hargaOriginal = 20000;
+
+const hargaBites = 20000;
+
+const hargaDancow = 20000;
+
+
+
+/* ================= HITUNG TOTAL ================= */
+
+function hitungTotal() {
+
+    let original =
+        Number(document.getElementById("original").value);
+
+    let bites =
+        Number(document.getElementById("bites").value);
+
+    let dancow =
+        Number(document.getElementById("dancow").value);
+
+
+    let total =
+        (original * hargaOriginal) +
+        (bites * hargaBites) +
+        (dancow * hargaDancow);
+
+
+    document.getElementById("originalText").innerText =
+        original + " box";
+
+    document.getElementById("bitesText").innerText =
+        bites + " box";
+
+    document.getElementById("dancowText").innerText =
+        dancow + " box";
+
+
+    document.getElementById("totalText").innerText =
+        "Rp" + total.toLocaleString("id-ID");
+
+}
+
+
+
+/* ================= KIRIM WHATSAPP ================= */
+
+function kirimPesanan() {
+
+
+    let nama =
+        document.getElementById("nama").value;
+
+    let telepon =
+        document.getElementById("telepon").value;
+
+    let alamat =
+        document.getElementById("alamat").value;
+
+    let pembayaran =
+        document.getElementById("pembayaran").value;
+
+
+    let original =
+        Number(document.getElementById("original").value);
+
+    let bites =
+        Number(document.getElementById("bites").value);
+
+    let dancow =
+        Number(document.getElementById("dancow").value);
+
+
+    let total =
+        (original * hargaOriginal) +
+        (bites * hargaBites) +
+        (dancow * hargaDancow);
+
+
+    /* CEK DATA */
+
+    if (
+        nama === "" ||
+        telepon === "" ||
+        alamat === "" ||
+        pembayaran === ""
+    ) {
+
+        alert(
+            "Yuk lengkapi data pemesanan terlebih dahulu! 🍪"
+        );
+
+        return;
+
+    }
+
+
+    if (total === 0) {
+
+        alert(
+            "Pilih minimal satu produk ya! 🍪"
+        );
+
+        return;
+
+    }
+
+
+    /* NOMOR WHATSAPP ADMIN */
+
+    let nomorAdmin = "6281234567890";
+
+
+    /* PESAN */
+
+    let pesan =
+        "🍪 *PESANAN DUBAI CIWI*%0A" +
+        "━━━━━━━━━━━━━━%0A%0A" +
+
+        "👤 Nama: " + nama + "%0A" +
+        "📱 WhatsApp: " + telepon + "%0A" +
+        "📍 Alamat/Keterangan: " + alamat + "%0A%0A" +
+
+        "🛍️ *PESANAN:*%0A" +
+
+        "🍪 Original: " +
+        original + " box%0A" +
+
+        "🍪 Original Bites: " +
+        bites + " box%0A" +
+
+        "🍪 Dancow Version: " +
+        dancow + " box%0A%0A" +
+
+        "💳 Pembayaran: " +
+        pembayaran + "%0A" +
+
+        "💰 *TOTAL: Rp" +
+        total.toLocaleString("id-ID") +
+        "*%0A%0A" +
+
+        "Terima kasih sudah memesan di Dubai Ciwi! ♡";
+
+
+    let link =
+        "https://wa.me/" +
+        nomorAdmin +
+        "?text=" +
+        pesan;
+
+
+    window.open(link, "_blank");
+
+}
+
+</script>
+
+
+</body>
+</html>

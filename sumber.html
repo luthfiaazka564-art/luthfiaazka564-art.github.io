@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumber | fia's & Co</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8A9A5B;
+            color: #2B1700;
+            line-height: 1.8;
+        }
+
+        .sumber-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .sumber-header {
+            text-align: center;
+            padding: 35px 15px;
+            margin-bottom: 30px;
+        }
+
+        .sumber-header p {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #F7F0E5;
+        }
+
+        .sumber-header h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            font-weight: normal;
+            margin: 10px 0;
+            color: #2B1700;
+        }
+
+        .sumber-header .subtitle {
+            font-size: 14px;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .sumber-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sumber-item {
+            padding: 25px 5px;
+            border-bottom: 1px solid rgba(43, 23, 0, 0.3);
+            transition: padding-left 0.3s ease;
+        }
+
+        .sumber-item:hover {
+            padding-left: 15px;
+        }
+
+        .nomor {
+            font-size: 12px;
+            color: #F7F0E5;
+            letter-spacing: 2px;
+        }
+
+        .sumber-item h2 {
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: normal;
+            margin: 5px 0;
+        }
+
+        .sumber-item p {
+            font-size: 14px;
+            color: #3D3328;
+            margin-bottom: 8px;
+        }
+
+        .sumber-item a {
+            color: #F7F0E5;
+            text-decoration: none;
+            font-size: 13px;
+            border-bottom: 1px solid #F7F0E5;
+            padding-bottom: 3px;
+        }
+
+        .sumber-item a:hover {
+            color: #2B1700;
+            border-color: #2B1700;
+        }
+
+        .catatan {
+            margin-top: 35px;
+            font-size: 13px;
+            color: #F7F0E5;
+            font-style: italic;
+        }
+
+        .footer-sumber {
+            text-align: center;
+            padding: 30px 10px;
+            font-family: Georgia, serif;
+            font-size: 13px;
+            color: #F7F0E5;
+        }
+
+        @media (max-width: 600px) {
+            .sumber-header h1 {
+                font-size: 32px;
+            }
+
+            .sumber-container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .sumber-item h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="sumber-container">
+
+        <header class="sumber-header">
+            <p>fia's & Co · Dubai Chewy Cookie</p>
+            <h1>Sources & References</h1>
+            <p class="subtitle">
+                Referensi yang digunakan dalam penyusunan website kami.
+            </p>
+        </header>
+
+        <section class="sumber-list">
+
+            <article class="sumber-item">
+                <span class="nomor">01 / PRODUCT INFORMATION</span>
+                <h2>Informasi Produk</h2>
+                <p>
+                    Informasi mengenai varian, bahan, dan deskripsi produk
+                    disesuaikan dengan data produk fia's & Co.
+                </p>
+            </article>
+
+            <article class="sumber-item">
+                <span class="nomor">02 / PRODUCT PHOTOGRAPHY</span>
+                <h2>Foto Produk</h2>
+                <p>
+                    Foto produk yang ditampilkan pada website merupakan
+                   gambar yang bersumber dari Pinterest, berikut beberapa link yang digunakan:
+                   1. https://pin.it/3aQ4KhbUg
+                   2.https://pin.it/4F6WDJm93
+                   3.https://pin.it/3h9Kgtx25
+                    
+                </p>
+            </article>
+
+                        <article class="sumber-item">
+                <span class="nomor">03 / DESIGN CONCEPT</span>
+                <h2>Konsep Desain</h2>
+                <p>
+                    Konsep visual website menggunakan perpaduan warna
+                    hijau sage, cokelat, dan cream untuk menciptakan
+                    tampilan yang sederhana dan nyaman dilihat.
+                </p>
+            </article>
+
+        </section>
+
+        <p class="catatan">
+            Halaman ini memuat referensi dan keterangan mengenai
+            materi yang digunakan dalam website fia's & Co. adalah tugas untuk memenuhi nilai akhir informatika
+        </p>
+
+        <footer class="footer-sumber">
+            fia's & Co — Sweetness in Every Bite.
+        </footer>
+
+    </main>
+
+</body>
+</html>

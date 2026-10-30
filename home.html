@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dubai Chewy cookie</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f3;
+    color: #4a2418;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: #3b211a;
+    color: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #ffcba8;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #fff3ea,
+        #f8d9c8
+    );
+}
+
+.hero-text {
+    width: 48%;
+    animation: masuk 1s ease;
+}
+
+.hero-text small {
+    color: #a65d3c;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: #a65332;
+}
+
+.hero-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #76584d;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #8f452e;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: #69301f;
+    box-shadow: 0 8px 20px rgba(100,50,30,.25);
+}
+
+
+/* ================= ILUSTRASI ================= */
+
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.cookie {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: #f0c4a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: mengambang 3s ease-in-out infinite;
+    box-shadow: 0 25px 50px rgba(120,60,30,.2);
+}
+
+/* cookie */
+
+.cookie::before {
+    content: "🍪";
+    font-size: 210px;
+    filter: drop-shadow(5px 10px 5px rgba(0,0,0,.15));
+}
+
+/* dekorasi */
+
+.emoji {
+    position: absolute;
+    font-size: 45px;
+}
+
+.e1 {
+    top: 20px;
+    right: 20px;
+}
+
+.e2 {
+    bottom: 30px;
+    left: 15px;
+}
+
+.e3 {
+    top: 100px;
+    left: -25px;
+}
+
+
+/* ================= PROMO ================= */
+
+.promo {
+    padding: 45px 8%;
+    text-align: center;
+    background: white;
+}
+
+.promo h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.promo p {
+    color: #80665b;
+}
+
+.promo-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.promo-card {
+    width: 250px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff5ef;
+    transition: .4s;
+}
+
+.promo-card:hover {
+    transform: translateY(-8px);
+}
+
+.promo-card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.promo-card h3 {
+    margin-bottom: 8px;
+}
+
+
+/* ================= SLIDER ================= */
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    background: #8f452e;
+    color: white;
+    padding: 15px 0;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: geser 18s linear infinite;
+}
+
+.slider-track span {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 40px;
+}
+
+
+/* ================= ANIMASI ================= */
+
+@keyframes mengambang {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+}
+
+@keyframes geser {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+@keyframes masuk {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .cookie {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cookie::before {
+        font-size: 150px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        🍪 Dubai Chewy cookie
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <small>WELCOME TO FIA'S & Co ✨</small>
+
+        <h1>
+            Sweetness<br>
+            <span>in Every Bite.</span>
+        </h1>
+
+        <p>
+            Nikmati chewy cookie dengan rasa yang
+            lembut, manis, dan bikin kamu ingin
+            mencoba lagi.
+        </p>
+
+        
+    </div>
+
+
+    <!-- ILUSTRASI PRODUK -->
+
+    <div class="hero-image">
+
+        <div class="cookie">
+
+            <div class="emoji e1">✨</div>
+            <div class="emoji e2">🍪</div>
+            <div class="emoji e3">♡</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TEKS BERGERAK -->
+
+<div class="slider">
+
+    <div class="slider-track">
+
+        <span>🍪 DUBAI CHEWY COOKIE</span>
+        <span>✨ FRESH & DELICIOUS</span>
+        <span>♡ SWEET MOMENTS</span>
+        <span>🍫 PREMIUM QUALITY</span>
+
+        <span>🍪 DUBAI CHEWY COOKIE</span>
+        <span>✨ FRESH & DELICIOUS</span>
+        <span>♡ SWEET MOMENTS</span>
+        <span>🍫 PREMIUM QUALITY</span>
+
+    </div>
+
+</div>
+
+
+<!-- KEUNGGULAN -->
+
+<section class="promo">
+
+    <h2>Kenapa Dubai Chewy Cookie? 🍪</h2>
+
+    <p>
+        Dibuat untuk menemani setiap momen manismu.
+    </p>
+
+
+    <div class="promo-container">
+
+        <div class="promo-card">
+
+            <div class="icon">🍪</div>
+
+            <h3>Chewy & Soft</h3>
+
+            <p>
+                Tekstur lembut dan chewy
+                di setiap gigitan.
+            </p>
+
+        </div>
+
+
+        <div class="promo-card">
+
+            <div class="icon">✨</div>
+
+            <h3>Freshly Made</h3>
+
+            <p>
+                Dibuat dengan bahan
+                berkualitas dan fresh.
+            </p>
+
+        </div>
+
+
+        <div class="promo-card">
+
+            <div class="icon">💝</div>
+
+            <h3>Perfect Gift</h3>
+
+            <p>
+                Cocok untuk teman,
+                keluarga, maupun orang tersayang.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>
